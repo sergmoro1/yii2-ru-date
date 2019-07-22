@@ -3,9 +3,10 @@ Yii2 behavior for date fields processing
 
 The Behavior class for operations with date fields in Russian format.
 
-Instead, use [sergmoro1\yii2-ru-kit](https://github.com/sergmoro1/yii2-ru-kit).
+Better use [sergmoro1\yii2-ru-kit](https://github.com/sergmoro1/yii2-ru-kit).
 
 Installation
+------------
 
 ```php
 $ composer require sergmoro1/yii2-ru-date "dev-master"
