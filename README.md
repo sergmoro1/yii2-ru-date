@@ -1,44 +1,47 @@
-<h1>Yii2 behavior for date fields processing</h1>
+Yii2 behavior for date fields processing
+========================================
 
 The Behavior class for operations with date fields in Russian format.
 
-<h2>Installation</h2>
+Instead, use [sergmoro1\yii2-ru-kit](https://github.com/sergmoro1/yii2-ru-kit).
 
-<pre>
+Installation
+
+```php
 $ composer require sergmoro1/yii2-ru-date "dev-master"
-</pre>
+```
 
-<h2>Usage</h2>
+Usage
+-----
 
 You should define behavior in a Model class.
 
-<pre>
+```php
 use sergmoro1\rudate\RuDate;
 
 class Post extends ActiveRecord
 {
-  ...
   public function behaviors() {
     return [
-      'RuDate' =&gt; ['class' =&gt; RuDate::className()]
+      'RuDate' => ['class' => RuDate::className()]
     ];
   }
-  ...
-</pre>
+```
 
 And use it in appropriate place in a view.
-<pre>
-&lt;?= $model->getFullDate('created_at'); ?&gt;
-</pre>
+
+```php
+<?= $model->getFullDate('created_at'); ?>
+```
 
 Only month and year.
 
-<pre>
-&lt;?= $model->getFullDate('created_at', 'M Y'); ?&gt; // Фев 2018
-</pre>
+```php
+<?= $model->getFullDate('created_at', 'M Y'); ?> // Фев 2018
+```
 
 Full month, day and year.
 
-<pre>
-&lt;?= $model->getFullDate('created_at', 'F d из t, Y (e)'); ?&gt; // Февраль 13 из 28, 2018 (UTC)
-</pre>
+```php
+<?= $model->getFullDate('created_at', 'F d из t, Y (e)'); ?> // Февраль 13 из 28, 2018 (UTC)
+```
